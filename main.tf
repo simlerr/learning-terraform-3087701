@@ -68,8 +68,7 @@ module "alb" {
     }
   }
 ]
-
-  listeners = {
+listeners = {
     ex-http-https-redirect = {
       port     = 80
       protocol = "HTTP"
@@ -78,7 +77,7 @@ module "alb" {
         protocol    = "HTTP"
         status_code = "HTTP_301"
       }
-    }
+  }
 
   tags = {
     Environment = "Dev"
