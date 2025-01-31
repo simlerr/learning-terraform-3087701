@@ -68,6 +68,7 @@ module "alb" {
     }
   }
 ]
+
 listeners = {
     ex-http-https-redirect = {
       port     = 80
