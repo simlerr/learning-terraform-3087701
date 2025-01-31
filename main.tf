@@ -62,11 +62,12 @@ module "alb" {
       target_type      = "instance"
       targets = {
         my_target = {
-        target_id        = aws_instance.blog.id
-        port = 80
-        }
+         target_id        = aws_instance.blog.id
+         port = 80
+      }
     }
-  ]
+  }
+]
 
   http_tcp_listeners = [
     {
@@ -93,5 +94,5 @@ module "blog_sg" {
     egress_rules = ["all-all"]
     egress_cidr_blocks = ["0.0.0.0/0"]
 }
-#commit this yea
+#commit this yea round 2
 
